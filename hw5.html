@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr1 = [0,2,4,6,8]
+        let arr2 = [1,3,5,7]
+        let arrcom = []
+        let arrangecom1 = []
+        let arrangecom2 = []
+        function combine(){
+            for (let b = 0; b <= arr1.length; b++) {
+                arrcom.unshift(arr1[b])
+            }
+            for (let a = 0; a < arr2.length; a++) {
+                arrcom.unshift(arr2[a])
+            }
+        }
+        function giveSmal(){
+            let numberMin = arrcom[0];
+            for (let b = 0; b < arrcom.length; b++) {
+            if (arrcom[b] <= numberMin) {
+            arrangecom1.unshift(arrcom[b])
+            }
+            }
+        }
+        combine()
+        alert(arrcom)
+        giveSmal()
+        alert(arrangecom1)
+    </script>
+</body>
+</html>

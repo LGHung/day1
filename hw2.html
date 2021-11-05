@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numb = []
+        let numbBig = []
+        let numbSmal = []
+        for (let i = 0; i< 10; i++) {
+            let pushNumb = prompt("enter n")
+            if (isNaN(pushNumb) == false){
+                numb.push(pushNumb)
+            }
+            else{
+                alert("enter a number")
+            }
+        }
+        function giveBig(){
+            let numberMax = numb[0];
+            for (let a = 0; a < numb.length; a++) {
+            if (numb[a] >= numberMax) {
+            numbBig.unshift(numb[a])
+            }
+            }
+        }
+        function giveSmal(){
+            let numberMin = numb[0];
+            for (let b = 0; b < numb.length; b++) {
+            if (numb[b] <= numberMin) {
+            numbSmal.unshift(numb[b])
+            }
+            }
+        }
+        giveSmal()
+        alert(numbSmal)
+    </script>
+</body>
+</html>
